@@ -1,0 +1,11 @@
+import pandas as pd
+
+df = pd.read_csv('C:\\Users\\harsh\\Downloads\\50_Startups (1).csv')
+print("Initial data base as given in spreadsheet::")
+print(df.head())
+print("absent values in data::")
+print(df.isnull().sum())
+df = df.dropna()
+print("Corrected and processed data::")
+print(df.head())
+df.to_csv('C:\\Users\\harsh\\Downloads\\cleaned_data.csv', index=False)
